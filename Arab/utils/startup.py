@@ -15,7 +15,7 @@ from ..sql_helper.global_collection import del_keyword_collectionlist, get_item_
 from ..sql_helper.globals import addgvar, delgvar, gvarstatus
 from .klanr import load_module
 from .tools import create_supergroup
-LOGS = logging.getLogger("الشيطان \n ")
+LOGS = logging.getLogger("سيمو \n ")
 cmdhr = Config.COMMAND_HAND_LER
 async def load_plugins(folder):
     path = f"Arab/{folder}/*.py"
@@ -46,7 +46,7 @@ async def load_plugins(folder):
 async def startupmessage():
     try:
         if BOTLOG:
-            Config.CATUBLOGO = await iqthon.tgbot.send_file(BOTLOG_CHATID, "https://telegra.ph/file/3c8dd8a768b6055000a50.jpg", caption="🝳 ⦙ تـمّ  اعـادة تشـغيل\n سورس الشيطان ✓  :  [ 7.7 ] .\n\n🝳 ⦙ للحصول على اوامر السورس\n أرسـل : (  `.اوامري`  ) ",                buttons=[(Button.url("مطور سورس الشيطان الرسمي", "https://t.me/iiqllll"),)],            )
+            Config.CATUBLOGO = await iqthon.tgbot.send_file(BOTLOG_CHATID, "https://telegra.ph/file/0fd4f15e79afdbc03e8df.jpg", caption="🝳 ⦙ تـمّ  اعـادة تشـغيل\n سورس سيمو ✓  :  [ 7.7 ] .\n\n🝳 ⦙ للحصول على اوامر السورس\n أرسـل : (  `.اوامري`  ) ",                buttons=[(Button.url("مطور سورس سيمو الرسمي", "https://t.me/DEV_SAMIR"),)],            )
     except Exception as e:
         LOGS.error(e)
         return None
@@ -100,7 +100,7 @@ async def verifyLoggerGroup():
     else:
         descript = "🝳 ︙ لا تحذف هذه المجموعة أو تغير إلى مجموعة (إذا قمت بتغيير المجموعة ، فسيتم فقد كل شيئ .)"
         iqphoto1 = await iqthon.upload_file(file="SQL/extras/iqthon1.jpg")
-        _, groupid = await create_supergroup(            "تخزين سورس الشيطان العام", iqthon, Config.TG_BOT_USERNAME, descript  ,  iqphoto1 )
+        _, groupid = await create_supergroup(            "تخزين سورس سيمو العام", iqthon, Config.TG_BOT_USERNAME, descript  ,  iqphoto1 )
         addgvar("PRIVATE_GROUP_BOT_API_ID", groupid)
         print("🝳 ︙ تم إنشاء مجموعة المسـاعدة بنجاح وإضافتها إلى المتغيرات.")
         flag = True
@@ -119,9 +119,9 @@ async def verifyLoggerGroup():
         except Exception as e:
             LOGS.error(                "🝳 ︙ حدث استثناء عند محاولة التحقق من PM_LOGGER_GROUP_ID.\n" + str(e)            )
     else:
-        descript = "🝳 ︙ وظيفه هذا المجموعة لحفض رسائل التي تكون موجة اليك ان لم تعجبك هذا المجموعة قم بحذفها نهائيأ 👍 \n  الـسورس : - @pp_g3"
+        descript = "🝳 ︙ وظيفه هذا المجموعة لحفض رسائل التي تكون موجة اليك ان لم تعجبك هذا المجموعة قم بحذفها نهائيأ 👍 \n  الـسورس : - @FTTUTY"
         iqphoto2 = await iqthon.upload_file(file="SQL/extras/iqthon2.jpg")
-        _, groupid = await create_supergroup(            "تخزين سورس الشيطان الخاص", iqthon, Config.TG_BOT_USERNAME, descript    , iqphoto2  )
+        _, groupid = await create_supergroup(            "تخزين سورس سيمو الخاص", iqthon, Config.TG_BOT_USERNAME, descript    , iqphoto2  )
         addgvar("PM_LOGGER_GROUP_ID", groupid)
         print("🝳 ︙ تم إنشاء مجموعة خاصة لـ PRIVATE_GROUP_BOT_API_ID بنجاح وإضافتها إلى المتغيرات.")
         flag = True
