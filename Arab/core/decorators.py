@@ -13,7 +13,7 @@ def check_owner(func):
             except MessageNotModifiedError:
                 pass
         else:
-            HELP_TEXT = ("- اهلا هذا القائمه خاصه فقط للمنصب سورس الشيطان - @pp_g3")
+            HELP_TEXT = ("- اهلا هذا القائمه خاصه فقط للمنصب سورس سيمو - @FTTUTY")
             await c_q.answer(HELP_TEXT, alert=True)
 
     return wrapper
