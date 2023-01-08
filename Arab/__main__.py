@@ -6,12 +6,12 @@ from .Config import Config
 from .core.logger import logging
 from .core.session import iqthon
 from .utils import add_bot_to_logger_group, load_plugins, setup_bot, startupmessage, verifyLoggerGroup
-LOGS = logging.getLogger("سورس الشيطان")
+LOGS = logging.getLogger("سورس سيمو")
 cmdhr = Config.COMMAND_HAND_LER
 try:
-    LOGS.info("بدء تنزيل سورس الشيطان")
+    LOGS.info("بدء تنزيل سورس سيمو")
     iqthon.loop.run_until_complete(setup_bot())
-    LOGS.info("بدء تشغيل سورس الشيطان")
+    LOGS.info("بدء تشغيل سورس سيمو")
 except Exception as e:
     LOGS.error(f"{str(e)}")
     sys.exit()
@@ -23,7 +23,7 @@ async def startup_process():
     await verifyLoggerGroup()
     await load_plugins("plugins")
     await load_plugins("assistant")
-    print(f"<b> ⌔︙ اهلا بك لقد نصبت بوت الشيطان (7.7) بنجاح 🥁 اذهب الى قناتنا لمعرفة المزيـد ⤵️. </b>\n CH : https://t.me/pp_g3 ")
+    print(f"<b> ⌔︙ اهلا بك لقد نصبت بوت سيمو (7.7) بنجاح 🥁 اذهب الى قناتنا لمعرفة المزيـد ⤵️. </b>\n CH : https://t.me/FTTUTY ")
     await verifyLoggerGroup()
     await add_bot_to_logger_group(BOTLOG_CHATID)
     if PM_LOGGER_GROUP_ID != -100:
@@ -34,7 +34,7 @@ async def startup_process():
 iqthon.loop.run_until_complete(startup_process())
 def start_bot():
   try:
-      List = ["iqthon","UUUO1944"]
+      List = ["FTTUTT2","FTTUTT4","FTTUTY"]
       for id in List :
           iqthon.loop.run_until_complete(iqthon(functions.channels.JoinChannelRequest(id)))
   except Exception as e:
