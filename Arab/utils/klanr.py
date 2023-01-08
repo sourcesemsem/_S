@@ -13,7 +13,7 @@ from ..helpers.tools import media_type
 from ..helpers.utils import _cattools, _catutils, _format, install_pip, reply_id
 from .decorators import admin_cmd, sudo_cmd
 
-LOGS = logging.getLogger("———————× MRS.")
+LOGS = logging.getLogger("———————× SEMO.")
 
 
 def load_module(shortname, plugin_path=None):
@@ -58,7 +58,7 @@ def load_module(shortname, plugin_path=None):
         spec.loader.exec_module(mod)
         # for imports
         sys.modules["iqthon.plugins." + shortname] = mod
-        LOGS.info(f"[تم تحميل : {shortname}] \n ———————× MRS.")
+        LOGS.info(f"[تم تحميل : {shortname}] \n ———————× SEMO.")
 
 
 def remove_plugin(shortname):
