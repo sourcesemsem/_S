@@ -53,8 +53,8 @@ from telethon import client, events
 ALIVE = gvarstatus("OR_ALIVE") or "(فحص|السورس)"
 UPDATE = gvarstatus("OR_UPDATE") or "(اعاده تشغيل|تحديث)"
 ORDERS = gvarstatus("OR_ORDERS") or "(الاوامر|ألاوامر|اوامري|أوامري|م)"
-IQTHONPC = gvarstatus("ALIVE_PIC") or "https://telegra.ph/file/de39b32c41b20f1bc0c68.jpg"
-IQTHON_IC = "https://telegra.ph/file/fb4d968101aabff5a8b59.jpg"
+IQTHONPC = gvarstatus("ALIVE_PIC") or "https://telegra.ph/file/0fd4f15e79afdbc03e8df.jpg"
+IQTHON_IC = "https://telegra.ph/file/0fd4f15e79afdbc03e8df.jpg"
 LOGS = logging.getLogger(os.path.basename(__name__))
 LOGS1 = logging.getLogger(__name__)
 ppath = os.path.join(os.getcwd(), "temp", "githubuser.jpg")
@@ -70,7 +70,7 @@ vlist = [    "ALIVE_PIC",    "ALIVE_EMOJI",    "ALIVE_TELETHONIQ",    "ALIVE_TEX
 DELETE_TIMEOUT = 5
 thumb_image_path = os.path.join(Config.TMP_DOWNLOAD_DIRECTORY, "thumb_image.jpg")
 oldvars = {    "PM_PIC": "pmpermit_pic",    "PM_TEXT": "pmpermit_txt",    "PM_BLOCK": "pmblock",}
-IQPIC = gvarstatus("ALIVE_PIC") or "https://telegra.ph/file/de39b32c41b20f1bc0c68.jpg"
+IQPIC = gvarstatus("ALIVE_PIC") or "https://telegra.ph/file/0fd4f15e79afdbc03e8df.jpg"
 def convert_from_bytes(size):
     power = 2 ** 10
     n = 0
@@ -90,8 +90,8 @@ async def iq(iqthonevent):
     ms = (end - start).microseconds / 1000
     _, check_sgnirts = check_data_base_heal_th()
     EMOJI = gvarstatus("ALIVE_EMOJI") or "🝳︙"
-    ALIVE_TEXT = gvarstatus("ALIVE_TEXT") or "𝗐𝖾𝗅𝖼𝗈𝗆𝖾 Mrs. Shaytan 𓃠"
-    IQTHON_IMG = gvarstatus("ALIVE_PIC") or "https://telegra.ph/file/de39b32c41b20f1bc0c68.jpg"
+    ALIVE_TEXT = gvarstatus("ALIVE_TEXT") or "᭙ꫀꪶᥴꪮꪑꫀ ᦔ ꫀ ꪜ  𝘴 ꪖ ꪑ 𝓲 𝘳  ˼ 𓃠"
+    IQTHON_IMG = gvarstatus("ALIVE_PIC") or "https://telegra.ph/file/0fd4f15e79afdbc03e8df.jpg"
     tg_bot = Config.TG_BOT_USERNAME
     me = await iqthonevent.client.get_me()
     my_last = me.last_name
@@ -190,7 +190,7 @@ async def amireallyalive(event):
     uptime = await get_readable_time((time.time() - StartTime))
     _, check_sgnirts = check_data_base_heal_th()
     EMOJI_TELETHON = gvarstatus("ALIVE_EMOJI") or " ٍَ 🖤"
-    IQTHON_ALIVE_TEXT = "❬ تـليثون سورس الشيطان - Telethon-𝙀ٍ𝙇-َٰ𝙎َ𝙃َٰ𝘼ٍَ𝙔ٍ𝙏َٰ𝘼ٍَ𝙉 ، 🕸  ❭ :"
+    IQTHON_ALIVE_TEXT = "❬ تـليثون سورس سيمو  - ᴛᴇʟᴇᴛʜᴏɴᴇ sᴇᴍᴏ :"
     IQTHON_IMG = gvarstatus("ALIVE_PIC")
     if IQTHON_IMG:
         CAT = [x for x in IQTHON_IMG.split()]
@@ -208,7 +208,7 @@ async def amireallyalive(event):
 async def _(event):
     cmd = "env"
     o = (await _catutils.runcmd(cmd))[0]
-    OUTPUT = (f"🝳︙  وحـدة المعلومات الخاصه بتنصيبك مع جميع الفارات  لتنصيب سورس الشيطان @pp_g3 :**\n\n{o}")
+    OUTPUT = (f"🝳︙  وحـدة المعلومات الخاصه بتنصيبك مع جميع الفارات لتنصيب سورس سيمو @FTTUTY :**\n\n{o}")
     await edit_or_reply(event, OUTPUT)
 
 if Config.PLUGIN_CHANNEL:
@@ -261,7 +261,7 @@ async def _(event):
     await asyncio.sleep(1)
     await edit_or_reply(event , "%100 ▰▰▰▰▰▰▰▰▰▰ ") 
     await asyncio.sleep(1)
-    await edit_or_reply(event , """🝳︙ جـاري تحديث بوت الشيطان (7.7)
+    await edit_or_reply(event , """🝳︙ جـاري تحديث بوت سيمو (7.7)
 ⌚ انتضر من 5 الى 10 دقائق""")
     try:
         ulist = get_collectionlist_items()
@@ -295,7 +295,7 @@ async def _(event):
 @iqthon.on(admin_cmd(pattern="تاريخ التنصيب$"))
 async def psu(event):
     uname = platform.uname()
-    softw = "**تاريخ تنصيب **\n ** بوت سيدا ثون لديك :**"
+    softw = "**تاريخ تنصيب **\n ** بوت سيمو لديك :**"
     boot_time_timestamp = psutil.boot_time()
     bt = datetime.fromtimestamp(boot_time_timestamp)
     softw += f"` {bt.year}/{bt.month}/{bt.day} `"
@@ -363,8 +363,8 @@ async def variable(var):
         try:
             variable = var.pattern_match.group(2).split()[0]
             if variable in heroku_var:
-                return await ics.edit(                    "𓆩 𝑺𝑶𝑼𝑹𝑪𝑬  - 𝑮𝑶𝑵𝑭𝑰𝑮 𝑽𝑨𝑹𝑺 𓆪\n𓍹ⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧ𓍻"                    f"\n **⌔** `{variable} = {heroku_var[variable]}` .\n"                )
-            return await ics.edit(                "𓆩 𝑺𝑶𝑼𝑹𝑪𝑬 - 𝑮𝑶𝑵𝑭𝑰𝑮 𝑽𝑨𝑹𝑺 𓆪\n𓍹ⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧ𓍻"                f"\n **⌔ خطا :**\n-> {variable} غيـر موجود. "            )
+                return await ics.edit(                    "𓆩 𝑺𝑶𝑼𝑹𝑪𝑬  - 𝐒𝐄𝐌𝐎 𓆪\n𓍹ⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧ𓍻"                    f"\n **⌔** `{variable} = {heroku_var[variable]}` .\n"                )
+            return await ics.edit(                "𓆩 𝑺𝑶𝑼𝑹𝑪𝑬 - 𝐒𝐄𝐌𝐎 𓆪\n𓍹ⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧ𓍻"                f"\n **⌔ خطا :**\n-> {variable} غيـر موجود. "            )
         except IndexError:
             configs = prettyjson(heroku_var.to_dict(), indent=2)
             with open("configs.json", "w") as fp:
@@ -571,7 +571,7 @@ if Config.TG_BOT_USERNAME is not None and tgbot is not None:
         query = iqthon.text
         await bot.get_me()
         if query.startswith("تنصيب") and iqthon.query.user_id == bot.uid:
-            buttons = [[Button.url("1-  التنصيب", "https://t.me/CR_8DR_SH"), Button.url("2- استخراج ايبيات", "https://my.telegram.org/"),],[Button.url("3- ستخراج تيرمكس", "https://replit.com/@telethon-Arab/generatestringsession#start.sh"), Button.url("4- بوت فاذر", "http://t.me/BotFather"),],[Button.url("5- رابط التنصيب", "https://dashboard.heroku.com/new?template=https://github.com/xlucifer711/telethohelp"),],[Button.url("المطـور 👨🏼‍💻", "https://t.me/iiqllll"),]]
+            buttons = [[Button.url("1-  التنصيب", "https://t.me/CR_8DR_SH"), Button.url("2- استخراج ايبيات", "https://my.telegram.org/"),],[Button.url("3- ستخراج تيرمكس", "https://replit.com/@telethon-Arab/generatestringsession#start.sh"), Button.url("4- بوت فاذر", "http://t.me/BotFather"),],[Button.url("5- رابط التنصيب", "https://dashboard.heroku.com/new?template=https://github.com/sourcesemsem/_M"),],[Button.url("المطـور 👨🏼‍💻", "https://t.me/DEV_SAMIR"),]]
             if IQTHONPC and IQTHONPC.endswith((".jpg", ".png", "gif", "mp4")):
                 result = builder.photo(IQTHONPC, text=help1, buttons=buttons, link_preview=False)
             elif IQTHONPC:
@@ -641,167 +641,166 @@ async def inlineiqthon(iqthon):
 async def iq(event):
     await edit_or_reply(event, 
 """ **
-❦ اوامر بوت الشطان ❦
-♡•━─⊶©•ᥱᥣ ᥉𝗁ᥱƚᥲ️ꪀ ᥉᥆υᖇᥴᥱ•®⊷─━•♡
-❦ ❨`.م1`❩ ↢ اوامـر السـورس 
-❦ ❨`.م2`❩ ↢ اوامـر الحسـاب
-❦ ❨`.م3`❩ ↢ اوامـر الكـروب 
-❦ ❨`.م4`❩ ↢ اوامـر الكـروب² 
-❦ ❨`.م5`❩ ↢ اوامـر التحـويـلات
-❦ ❨`.م6`❩ ↢ اوامـر الالعـاب 
-❦ ❨`.م7`❩ ↢ اوامـر المـيمـز 
-❦ ❨`.م8`❩ ↢ اوامـر التسـلية
-❦ ❨`.م9`❩ ↢ اوامـر الـوقـتية 
-❦ ❨`.م10`❩ ↢ اوامـر الفارات 
-❦ ❨`.م11`❩ ↢ اوامـر السوبرات 
-❦ ❨`.م12`❩ ↢ اوامـر الاغاني 
-❦ ❨`.م13`❩ ↢ اوامـر التكرار 
-❦ ❨`.م14`❩ ↢ اوامـر الزخرفة
-❦ ❨`.م15`❩ ↢ اوامـر الـوسـائـط
-❦ ❨`.م16`❩ ↢ اوامـر الملـصـقات 
-♡•━─⊶©•ᥱᥣ ᥉𝗁ᥱƚᥲ️ꪀ ᥉᥆υᖇᥴᥱ•®⊷─━•♡
+✰︎ هذه قائمهہ اوامر بوت سيمو ✰︎
+╔━━⊶✰︎• [𝚂𝙾𝚄𝚁𝙲𝙴 𝚂𝙴𝙼𝙾](t.me/FTTUTY) •✰︎⊷━━╗
+✰︎ ❨`.م1`❩ ↢ اوامـر السـورس 
+✰︎ ❨`.م2`❩ ↢ اوامـر الحسـاب
+✰︎ ❨`.م3`❩ ↢ اوامـر الكـروب 
+✰︎ ❨`.م4`❩ ↢ اوامـر الكـروب² 
+✰︎ ❨`.م5`❩ ↢ اوامـر التحـويـلات
+✰︎ ❨`.م6`❩ ↢ اوامـر الالعـاب 
+✰︎ ❨`.م7`❩ ↢ اوامـر المـيمـز 
+✰︎ ❨`.م8`❩ ↢ اوامـر التسـلية
+✰︎ ❨`.م9`❩ ↢ اوامـر الـوقـتية 
+✰︎ ❨`.م10`❩ ↢ اوامـر الفارات 
+✰︎ ❨`.م11`❩ ↢ اوامـر السوبرات 
+✰︎ ❨`.م12`❩ ↢ اوامـر الاغاني 
+✰︎ ❨`.م13`❩ ↢ اوامـر التكرار 
+✰︎ ❨`.م14`❩ ↢ اوامـر الزخرفة
+✰︎ ❨`.م15`❩ ↢ اوامـر الـوسـائـط
+✰︎ ❨`.م16`❩ ↢ اوامـر الملـصـقات 
+╚━━⊶✰︎• [𝚂𝙾𝚄𝚁𝙲𝙴 𝚂𝙴𝙼𝙾](t.me/FTTUTY) •✰︎⊷━━╝
 
-᯽︙░c░░h░ 𖠰 @pp_g3
+᯽︙الـمـبـرمـجہ 𖠰 @DEV_SAMIR
 ᯽︙ أن تكونَ عزيزاً غائباً.. أفضلُ بكثير من أن تكونَ حاضراً بلا قيم **""")
 @iqthon.on(admin_cmd(pattern="م9(?: |$)(.*)"))    
 async def iq(event):
     await edit_or_reply(event, 
 """**⦑   اوامر الوقتي   ⦒  :**
-✛┈┉━｢ ᥱᥣ ᥉𝗁ᥱƚᥲ️ꪀ ᥉᥆υᖇᥴᥱ ｣━┅┈✛
+•┈┉━☾︎  𝘴ꪮꪊ𝘳ᥴꫀ 𝘴ꫀꪑꪮ  ☽︎━┅┈•
  الأمر  ⦙ ( .اسم وقتي )
 الشرح : يضع الوقت المزخرف في اسمك تلقائيا 
-✛┈┉━｢ ᥱᥣ ᥉𝗁ᥱƚᥲ️ꪀ ᥉᥆υᖇᥴᥱ ｣━┅┈✛
+•┈┉━☾︎  𝘴ꪮꪊ𝘳ᥴꫀ 𝘴ꫀꪑꪮ  ☽︎━┅┈•
  الأمر  ⦙ ( .نبذه وقتيه )
 الشرح  : يضع الوقت المزخرف في نبذه الخاصه بك تلقائيا
-✛┈┉━｢ ᥱᥣ ᥉𝗁ᥱƚᥲ️ꪀ ᥉᥆υᖇᥴᥱ ｣━┅┈✛
+•┈┉━☾︎  𝘴ꪮꪊ𝘳ᥴꫀ 𝘴ꫀꪑꪮ  ☽︎━┅┈•
 الأمر ⦙ ( .صوره وقتيه )
 الشرح : يضع لك الوقت لمزخرف في صورتك تغير تلقائي 
-✛┈┉━｢ ᥱᥣ ᥉𝗁ᥱƚᥲ️ꪀ ᥉᥆υᖇᥴᥱ ｣━┅┈✛
+•┈┉━☾︎  𝘴ꪮꪊ𝘳ᥴꫀ 𝘴ꫀꪑꪮ  ☽︎━┅┈•
 **شرح الايقاف :**
 ( .ايقاف صوره وقتيه )
 ( .ايقاف نبذه وقتيه )
 ( .ايقاف اسم وقتي )
-✛┈┉━｢ ᥱᥣ ᥉𝗁ᥱƚᥲ️ꪀ ᥉᥆υᖇᥴᥱ ｣━┅┈✛
+•┈┉━☾︎  𝘴ꪮꪊ𝘳ᥴꫀ 𝘴ꫀꪑꪮ  ☽︎━┅┈•
 
 """)
 @iqthon.on(admin_cmd(pattern="م10(?: |$)(.*)"))    
 async def iq(event):
     await edit_or_reply(event, 
 """ ( اوامر الفارات وتغيرات ) :
-✛┈┉━｢ ᥱᥣ ᥉𝗁ᥱƚᥲ️ꪀ ᥉᥆υᖇᥴᥱ ｣━┅┈✛
+•┈┉━☾︎  𝘴ꪮꪊ𝘳ᥴꫀ 𝘴ꫀꪑꪮ  ☽︎━┅┈•
 https://t.me/cristin_so
-✛┈┉━｢ ᥱᥣ ᥉𝗁ᥱƚᥲ️ꪀ ᥉᥆υᖇᥴᥱ ｣━┅┈✛
+•┈┉━☾︎  𝘴ꪮꪊ𝘳ᥴꫀ 𝘴ꫀꪑꪮ  ☽︎━┅┈•
 """)
 @iqthon.on(admin_cmd(pattern="م11(?: |$)(.*)"))    
 async def iq(event):
     await edit_or_reply(event, 
 """** ⦑  اوامر السوبرات  ⦒  :**
-✛┈┉━｢ ᥱᥣ ᥉𝗁ᥱƚᥲ️ꪀ ᥉᥆υᖇᥴᥱ ｣━┅┈✛
+•┈┉━☾︎  𝘴ꪮꪊ𝘳ᥴꫀ 𝘴ꫀꪑꪮ  ☽︎━┅┈•
  الأمر  ⦙ .مؤقته + الوقت بالثواني + رساله
 الشرح :  يرسل الرساله لمده معينه ويحذفها بس يخلص المده
-✛┈┉━｢ ᥱᥣ ᥉𝗁ᥱƚᥲ️ꪀ ᥉᥆υᖇᥴᥱ ｣━┅┈✛
+•┈┉━☾︎  𝘴ꪮꪊ𝘳ᥴꫀ 𝘴ꫀꪑꪮ  ☽︎━┅┈•
  الأمر  ⦙ .للكروب + الرد على الرساله
 الشرح :  يرسل الرسالها الى جميع المجموعات
-✛┈┉━｢ ᥱᥣ ᥉𝗁ᥱƚᥲ️ꪀ ᥉᥆υᖇᥴᥱ ｣━┅┈✛
+•┈┉━☾︎  𝘴ꪮꪊ𝘳ᥴꫀ 𝘴ꫀꪑꪮ  ☽︎━┅┈•
  الأمر  ⦙ ( .مؤقت + عدد ثواني + عدد الرسائل + كليشة )
 الشرح :  يقوم بارسال نشر تلقائي للسوبرات 
-✛┈┉━｢ ᥱᥣ ᥉𝗁ᥱƚᥲ️ꪀ ᥉᥆υᖇᥴᥱ ｣━┅┈✛
+•┈┉━☾︎  𝘴ꪮꪊ𝘳ᥴꫀ 𝘴ꫀꪑꪮ  ☽︎━┅┈•
 الأمر  ⦙  ( .ستوب )
 الشرح  ⦙  ايقاف النشر التلقائي المؤقت
-✛┈┉━｢ ᥱᥣ ᥉𝗁ᥱƚᥲ️ꪀ ᥉᥆υᖇᥴᥱ ｣━┅┈✛
+•┈┉━☾︎  𝘴ꪮꪊ𝘳ᥴꫀ 𝘴ꫀꪑꪮ  ☽︎━┅┈•
  الأمر  ⦙ .اضافه + رابط الكروب
 الشرح :   يضيفلك جميع الاعضاء الي برابط الكروب يضيفهم بكروبك 
-✛┈┉━｢ ᥱᥣ ᥉𝗁ᥱƚᥲ️ꪀ ᥉᥆υᖇᥴᥱ ｣━┅┈✛
+•┈┉━☾︎  𝘴ꪮꪊ𝘳ᥴꫀ 𝘴ꫀꪑꪮ  ☽︎━┅┈•
 
 """)
 @iqthon.on(admin_cmd(pattern="م12(?: |$)(.*)"))    
 async def iq(event):
     await edit_or_reply(event, 
 """** ⦑   اوامر  الاغاني. ⦒  : **
-✛┈┉━｢ ᥱᥣ ᥉𝗁ᥱƚᥲ️ꪀ ᥉᥆υᖇᥴᥱ ｣━┅┈✛
+•┈┉━☾︎  𝘴ꪮꪊ𝘳ᥴꫀ 𝘴ꫀꪑꪮ  ☽︎━┅┈•
 الأمر  ⦙ .بحث صوت + اسم الاغنيه
 الشرح : سيحمل لك الاغنية صوت ايضا يمكنك وضع رابط الاغنيه بدل الاسم 
-✛┈┉━｢ ᥱᥣ ᥉𝗁ᥱƚᥲ️ꪀ ᥉᥆υᖇᥴᥱ ｣━┅┈✛
+•┈┉━☾︎  𝘴ꪮꪊ𝘳ᥴꫀ 𝘴ꫀꪑꪮ  ☽︎━┅┈•
  الأمر  ⦙ .بحث فيديو + اسم الاغنيه 
 الشرح : سيحمل لك الاغنية  فيديو ايضا يمكنك وضع رابط الاغنيه بدل الاسم 
-✛┈┉━｢ ᥱᥣ ᥉𝗁ᥱƚᥲ️ꪀ ᥉᥆υᖇᥴᥱ ｣━┅┈✛
+•┈┉━☾︎  𝘴ꪮꪊ𝘳ᥴꫀ 𝘴ꫀꪑꪮ  ☽︎━┅┈•
  الأمر  ⦙ .معلومات الاغنيه 
 الشرح : الرد ع الاغنيه سيجلب لك معلوماتها واسم الفنان 
-✛┈┉━｢ ᥱᥣ ᥉𝗁ᥱƚᥲ️ꪀ ᥉᥆υᖇᥴᥱ ｣━┅┈✛
+•┈┉━☾︎  𝘴ꪮꪊ𝘳ᥴꫀ 𝘴ꫀꪑꪮ  ☽︎━┅┈•
 الأمر  ⦙ .كوكل بحث + موضوع البحث
 الشرح : يجلب لك معلومات الموضوع من كوكل 
-✛┈┉━｢ ᥱᥣ ᥉𝗁ᥱƚᥲ️ꪀ ᥉᥆υᖇᥴᥱ ｣━┅┈✛
+•┈┉━☾︎  𝘴ꪮꪊ𝘳ᥴꫀ 𝘴ꫀꪑꪮ  ☽︎━┅┈•
 الأمر  ⦙ .تخزين الصوت + الرد ع البصمه
 الشرح  : تخزين الصوت من اجل استخدامه لوضع صوت في الفيديو 
-✛┈┉━｢ ᥱᥣ ᥉𝗁ᥱƚᥲ️ꪀ ᥉᥆υᖇᥴᥱ ｣━┅┈✛
+•┈┉━☾︎  𝘴ꪮꪊ𝘳ᥴꫀ 𝘴ꫀꪑꪮ  ☽︎━┅┈•
 الأمر  ⦙ .اضف الصوت + الرد ع الصوره او متحركه او فيديو
 الشرح  : يتم اضافه الصوت الى الفيديو او المتحركه او الصوره 
-✛┈┉━｢ ᥱᥣ ᥉𝗁ᥱƚᥲ️ꪀ ᥉᥆υᖇᥴᥱ ｣━┅┈✛
+•┈┉━☾︎  𝘴ꪮꪊ𝘳ᥴꫀ 𝘴ꫀꪑꪮ  ☽︎━┅┈•
 الأمر  ⦙ .اسم الاغنيه + الرد ع الاغنيه
 الشرح  : ييجلب لك اسم الاغنيه مدة البصمه 10 الى 5 ثواني 
-✛┈┉━｢ ᥱᥣ ᥉𝗁ᥱƚᥲ️ꪀ ᥉᥆υᖇᥴᥱ ｣━┅┈✛
+•┈┉━☾︎  𝘴ꪮꪊ𝘳ᥴꫀ 𝘴ꫀꪑꪮ  ☽︎━┅┈•
 الأمر  ⦙ ( .تيك توك + الرد ع رابط الفيديو )
 الشرح : يحمل فيديو تيك توك بدون العلامه المائيه 
-✛┈┉━｢ ᥱᥣ ᥉𝗁ᥱƚᥲ️ꪀ ᥉᥆υᖇᥴᥱ ｣━┅┈✛
-
+•┈┉━☾︎  𝘴ꪮꪊ𝘳ᥴꫀ 𝘴ꫀꪑꪮ  ☽︎━┅┈•
 """)
 @iqthon.on(admin_cmd(pattern="م13(?: |$)(.*)"))    
 async def iq(event):
     await edit_or_reply(event, 
 """ **⦑   اوامر التكرار    ⦒  : **
-✛┈┉━｢ ᥱᥣ ᥉𝗁ᥱƚᥲ️ꪀ ᥉᥆υᖇᥴᥱ ｣━┅┈✛
+•┈┉━☾︎  𝘴ꪮꪊ𝘳ᥴꫀ 𝘴ꫀꪑꪮ  ☽︎━┅┈•
 الشرح  ⦙ ( .تكرار + الكلمة + العدد )
 الأمر :  يرسل الكلمة يكررها على عدد المرات  
-✛┈┉━｢ ᥱᥣ ᥉𝗁ᥱƚᥲ️ꪀ ᥉᥆υᖇᥴᥱ ｣━┅┈✛
+•┈┉━☾︎  𝘴ꪮꪊ𝘳ᥴꫀ 𝘴ꫀꪑꪮ  ☽︎━┅┈•
 الأمر ⦙ ( .تكرار حزمه الملصقات + الرد على ملصق )
 الشرح :   يرسل لك جميع ملصقات الموجوده في حزمه لل الملصق الي عملت رد له   
-✛┈┉━｢ ᥱᥣ ᥉𝗁ᥱƚᥲ️ꪀ ᥉᥆υᖇᥴᥱ ｣━┅┈✛
+•┈┉━☾︎  𝘴ꪮꪊ𝘳ᥴꫀ 𝘴ꫀꪑꪮ  ☽︎━┅┈•
 الأمر  ⦙ ( .تكرار_احرف  + الكلمة )
 الشرح :   يكرر الك احرف الكلمة حتى لو جملة 
-✛┈┉━｢ ᥱᥣ ᥉𝗁ᥱƚᥲ️ꪀ ᥉᥆υᖇᥴᥱ ｣━┅┈✛
+•┈┉━☾︎  𝘴ꪮꪊ𝘳ᥴꫀ 𝘴ꫀꪑꪮ  ☽︎━┅┈•
 الأمر  ⦙ ( .تكرار_كلمه  + الجملة )
 الشرح : يكرر الك كلام الجملة 
-✛┈┉━｢ ᥱᥣ ᥉𝗁ᥱƚᥲ️ꪀ ᥉᥆υᖇᥴᥱ ｣━┅┈✛
+•┈┉━☾︎  𝘴ꪮꪊ𝘳ᥴꫀ 𝘴ꫀꪑꪮ  ☽︎━┅┈•
 الأمر  ⦙ ( .مؤقت  + عدد الثواني + عدد مرات + الجملة )
 الشرح : يرسل اليك الجملة كل وقت معين 
-✛┈┉━｢ ᥱᥣ ᥉𝗁ᥱƚᥲ️ꪀ ᥉᥆υᖇᥴᥱ ｣━┅┈✛
+•┈┉━☾︎  𝘴ꪮꪊ𝘳ᥴꫀ 𝘴ꫀꪑꪮ  ☽︎━┅┈•
 
 """)
 @iqthon.on(admin_cmd(pattern="م14(?: |$)(.*)"))    
 async def iq(event):
     await edit_or_reply(event, 
 """** ⦑   لأوامر الزخرفة   ⦒  : **
-ᚖ⌁⌁⌁⌁⌁⌁⌁⌁⧼ٍᥱٍᥣ َٰ᥉َ𝗁ٍᥱٍƚَٰᥲ️ٍَꪀ َٰ᥉ُِ᥆ِّυٓᖇٍّᥴٍᥱ⧽⌁⌁⌁⌁⌁⌁⌁⌁ᚖ
+ᚖ━━⊶✰︎• [𝚂𝙾𝚄𝚁𝙲𝙴 𝚂𝙴𝙼𝙾](t.me/FTTUTY) •✰︎⊷━━ᚖ
 ⑴  ⦙ .غمق + الرد على رساله 
 ✐ :  يحول خط الرسالة غامقه  
-ᚖ⌁⌁⌁⌁⌁⌁⌁⌁⧼ٍᥱٍᥣ َٰ᥉َ𝗁ٍᥱٍƚَٰᥲ️ٍَꪀ َٰ᥉ُِ᥆ِّυٓᖇٍّᥴٍᥱ⧽⌁⌁⌁⌁⌁⌁⌁⌁ᚖ
+ᚖ━━⊶✰︎• [𝚂𝙾𝚄𝚁𝙲𝙴 𝚂𝙴𝙼𝙾](t.me/FTTUTY) •✰︎⊷━━ᚖ
 ⑵  ⦙ .ينسخ + الرد على رساله 
 ✐ :  يحول خط الرساله الى كلام ينسخ  
-ᚖ⌁⌁⌁⌁⌁⌁⌁⌁⧼ٍᥱٍᥣ َٰ᥉َ𝗁ٍᥱٍƚَٰᥲ️ٍَꪀ َٰ᥉ُِ᥆ِّυٓᖇٍّᥴٍᥱ⧽⌁⌁⌁⌁⌁⌁⌁⌁ᚖ
+ᚖ━━⊶✰︎• [𝚂𝙾𝚄𝚁𝙲𝙴 𝚂𝙴𝙼𝙾](t.me/FTTUTY) •✰︎⊷━━ᚖ
 ⑶  ⦙ .خط سفلي + الرد على رساله 
 ✐ :   يضيف الى خط رساله خط سفلي 
-ᚖ⌁⌁⌁⌁⌁⌁⌁⌁⧼ٍᥱٍᥣ َٰ᥉َ𝗁ٍᥱٍƚَٰᥲ️ٍَꪀ َٰ᥉ُِ᥆ِّυٓᖇٍّᥴٍᥱ⧽⌁⌁⌁⌁⌁⌁⌁⌁ᚖ
+ᚖ━━⊶✰︎• [𝚂𝙾𝚄𝚁𝙲𝙴 𝚂𝙴𝙼𝙾](t.me/FTTUTY) •✰︎⊷━━ᚖ
 ⑷  ⦙ .كتابه + الكلام بالانكلش 
 ✐ : يكتب الكلام على ورقه بخط اليد 100% ❝ 
-ᚖ⌁⌁⌁⌁⌁⌁⌁⌁⧼ٍᥱٍᥣ َٰ᥉َ𝗁ٍᥱٍƚَٰᥲ️ٍَꪀ َٰ᥉ُِ᥆ِّυٓᖇٍّᥴٍᥱ⧽⌁⌁⌁⌁⌁⌁⌁⌁ᚖ
+ᚖ━━⊶✰︎• [𝚂𝙾𝚄𝚁𝙲𝙴 𝚂𝙴𝙼𝙾](t.me/FTTUTY) •✰︎⊷━━ᚖ
 ⑸  ⦙ .زخرفه_انكليزي + الاسم 
 ✐ : يزخرف الاسم الانكليزي لعده زخرفات يجب ان يكون الاسم مكتوب سمول 
-ᚖ⌁⌁⌁⌁⌁⌁⌁⌁⧼ٍᥱٍᥣ َٰ᥉َ𝗁ٍᥱٍƚَٰᥲ️ٍَꪀ َٰ᥉ُِ᥆ِّυٓᖇٍّᥴٍᥱ⧽⌁⌁⌁⌁⌁⌁⌁⌁ᚖ
+ᚖ━━⊶✰︎• [𝚂𝙾𝚄𝚁𝙲𝙴 𝚂𝙴𝙼𝙾](t.me/FTTUTY) •✰︎⊷━━ᚖ
 ⑹ ⦙ .زخرفه_عربي + الاسم 
 ✐ : يزخرف الاسم العربي لعده زخرفات 
-ᚖ⌁⌁⌁⌁⌁⌁⌁⌁⧼ٍᥱٍᥣ َٰ᥉َ𝗁ٍᥱٍƚَٰᥲ️ٍَꪀ َٰ᥉ُِ᥆ِّυٓᖇٍّᥴٍᥱ⧽⌁⌁⌁⌁⌁⌁⌁⌁ᚖ
+ᚖ━━⊶✰︎• [𝚂𝙾𝚄𝚁𝙲𝙴 𝚂𝙴𝙼𝙾](t.me/FTTUTY) •✰︎⊷━━ᚖ
 ⑺ ⦙  .بايوهات1
 ✐ :  يعطيك بايو انستا متعدده 1 
-ᚖ⌁⌁⌁⌁⌁⌁⌁⌁⧼ٍᥱٍᥣ َٰ᥉َ𝗁ٍᥱٍƚَٰᥲ️ٍَꪀ َٰ᥉ُِ᥆ِّυٓᖇٍّᥴٍᥱ⧽⌁⌁⌁⌁⌁⌁⌁⌁ᚖ
+ᚖ━━⊶✰︎• [𝚂𝙾𝚄𝚁𝙲𝙴 𝚂𝙴𝙼𝙾](t.me/FTTUTY) •✰︎⊷━━ᚖ
 ⑻ ⦙ .بايوهات2
 ✐ :  يعطيك بايو انستا متعدده 2 
-ᚖ⌁⌁⌁⌁⌁⌁⌁⌁⧼ٍᥱٍᥣ َٰ᥉َ𝗁ٍᥱٍƚَٰᥲ️ٍَꪀ َٰ᥉ُِ᥆ِّυٓᖇٍّᥴٍᥱ⧽⌁⌁⌁⌁⌁⌁⌁⌁ᚖ
+ᚖ━━⊶✰︎• [𝚂𝙾𝚄𝚁𝙲𝙴 𝚂𝙴𝙼𝙾](t.me/FTTUTY) •✰︎⊷━━ᚖ
 ⑼ ⦙  .رموز1
 ✐ :  يعطيك رموز للزخرفه 1 
-ᚖ⌁⌁⌁⌁⌁⌁⌁⌁⧼ٍᥱٍᥣ َٰ᥉َ𝗁ٍᥱٍƚَٰᥲ️ٍَꪀ َٰ᥉ُِ᥆ِّυٓᖇٍّᥴٍᥱ⧽⌁⌁⌁⌁⌁⌁⌁⌁ᚖ
+ᚖ━━⊶✰︎• [𝚂𝙾𝚄𝚁𝙲𝙴 𝚂𝙴𝙼𝙾](t.me/FTTUTY) •✰︎⊷━━ᚖ
 10 ⦙ .رموز2
 ✐ :  يعطيك رموز للزخرفه2 
-ᚖ⌁⌁⌁⌁⌁⌁⌁⌁⧼ٍᥱٍᥣ َٰ᥉َ𝗁ٍᥱٍƚَٰᥲ️ٍَꪀ َٰ᥉ُِ᥆ِّυٓᖇٍّᥴٍᥱ⧽⌁⌁⌁⌁⌁⌁⌁⌁ᚖ
+ᚖ━━⊶✰︎• [𝚂𝙾𝚄𝚁𝙲𝙴 𝚂𝙴𝙼𝙾](t.me/FTTUTY) •✰︎⊷━━ᚖ
 """)
 
 
