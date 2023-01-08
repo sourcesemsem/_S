@@ -15,9 +15,9 @@ from ..sql_helper.globals import gvarstatus
 from . import spamwatch
 plugin_category = "@pp_g3"
 LOGS = logging.getLogger(__name__)
-iqthon_TEXT = gvarstatus("CUSTOM_ALIVE_TEXT") or "╮•⎚ مـعلومات الـشخص من بوت الشيطان"
+iqthon_TEXT = gvarstatus("CUSTOM_ALIVE_TEXT") or "╮•⎚ مـعلومات الـشخص من بوت سـيـمـو"
 iqthonM = gvarstatus("CUSTOM_ALIVE_EMOJI") or "•❃"
-iqthonF = gvarstatus("CUSTOM_ALIVE_FONT") or "♡•━━─⊶©•ᥱᥣ ᥉𝗁ᥱƚᥲ️ꪀ ᥉᥆υᖇᥴᥱ•®⊷─━━•♡"
+iqthonF = gvarstatus("CUSTOM_ALIVE_FONT") or "╔━━⊶✰︎• [𝚂𝙾𝚄𝚁𝙲𝙴 𝚂𝙴𝙼𝙾](t.me/FTTUTY) •✰︎⊷━━╗"
 
 
 
@@ -84,13 +84,14 @@ async def fetch_info(replied_user, event):
     caption += f"<b> {iqthonM}╎الاسـم    ☆╮ </b> {full_name}\n"
     caption += f"<b> {iqthonM}╎المعـرف  ☆╮ </b> {username}\n"
     caption += f"<b> {iqthonM}╎الايـدي   ☆╮ </b> <code>{user_id}</code>\n"
-    caption += f"<b> {iqthonM}╎الرتبـــه  ☆╮ {rotbat} </b>\n"
+    caption += f"<b> {iqthonM}╎ايـدي الـجـروب  ☆╮ </b> <code>{message.chat.id}</code>\n"
+    caption += f"<b> {iqthonM}╎الرتبــهہ  ☆╮ {rotbat} </b>\n"
     caption += f"<b> {iqthonM}╎الصـور   ☆╮ </b> {replied_user_profile_photos_count}\n"
     caption += f"<b> {iqthonM}╎الحساب ☆╮ </b> "
     caption += f'<a href="tg://user?id={user_id}">{first_name}</a>'
     caption += f"\n<b> {iqthonM}╎البايـو    ⇠ </b> {user_bio} \n"
     caption += f"ٴ{iqthonF} "
-    caption += f"ٴ𓆩 𝙎𝙊𝙐𝙍𝘾𝞝  𝐄𝐋 𝐒𝐇𝐄𝐓𝐀𝐍 𓆪  - @pp_g3"    
+    caption += f"╚━━⊶✰︎• [𝚂𝙾𝚄𝚁𝙲𝙴 𝚂𝙴𝙼𝙾](t.me/FTTUTY) •✰︎⊷━━╝"    
     return photo, caption
 
 @iqthon.iq_cmd(pattern="ايدي(?: |$)(.*)",
