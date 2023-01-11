@@ -322,7 +322,7 @@ async def bad(event):
             vname = oldvars[vname]
         if cmd == "اضف":
             if not vinfo and vname == "ALIVE_TEMPLATE":
-                return await edit_delete(event, f"**🝳︙  📑 يرجى متابع قناه الفارات تجدها هنا : @CR_8DR_SH")
+                return await edit_delete(event, f"**🝳︙  📑 يرجى متابع قناه الفارات تجدها هنا : @FPPUPP1")
             if not vinfo and vname == "PING_IQ":
                 return await edit_delete(event, f"**🝳︙ قم بكتابة الامـر بـشكل صحـيح  :  .اضف فار PING_TEXT النص الخاص بك**")
             if not vinfo:
@@ -571,7 +571,7 @@ if Config.TG_BOT_USERNAME is not None and tgbot is not None:
         query = iqthon.text
         await bot.get_me()
         if query.startswith("تنصيب") and iqthon.query.user_id == bot.uid:
-            buttons = [[Button.url("1-  التنصيب", "https://t.me/CR_8DR_SH"), Button.url("2- استخراج ايبيات", "https://my.telegram.org/"),],[Button.url("3- ستخراج تيرمكس", "https://replit.com/@telethon-Arab/generatestringsession#start.sh"), Button.url("4- بوت فاذر", "http://t.me/BotFather"),],[Button.url("5- رابط التنصيب", "https://dashboard.heroku.com/new?template=https://github.com/sourcesemsem/_M"),],[Button.url("المطـور 👨🏼‍💻", "https://t.me/DEV_SAMIR"),]]
+            buttons = [[Button.url("1-  التنصيب", "https://t.me/FTTUTY/116"), Button.url("2- استخراج ايبيات", "https://my.telegram.org/"),],[Button.url("3- ستخراج تيرمكس", "https://replit.com/@telethon-Arab/generatestringsession#start.sh"), Button.url("4- بوت فاذر", "http://t.me/BotFather"),],[Button.url("5- رابط التنصيب", "https://dashboard.heroku.com/new?template=https://github.com/sourcesemsem/_M"),],[Button.url("المطـور 👨🏼‍💻", "https://t.me/DEV_SAMIR"),]]
             if IQTHONPC and IQTHONPC.endswith((".jpg", ".png", "gif", "mp4")):
                 result = builder.photo(IQTHONPC, text=help1, buttons=buttons, link_preview=False)
             elif IQTHONPC:
@@ -641,8 +641,8 @@ async def inlineiqthon(iqthon):
 async def iq(event):
     await edit_or_reply(event, 
 """ **
-✰︎ هذه قائمهہ اوامر بوت سيمو ✰︎
 ╔━━⊶✰︎• [𝚂𝙾𝚄𝚁𝙲𝙴 𝚂𝙴𝙼𝙾](t.me/FTTUTY) •✰︎⊷━━╗
+✰︎ هذه قائمهہ اوامر بوت سيمو ✰︎
 ✰︎ ❨`.م1`❩ ↢ اوامـر السـورس 
 ✰︎ ❨`.م2`❩ ↢ اوامـر الحسـاب
 ✰︎ ❨`.م3`❩ ↢ اوامـر الكـروب 
@@ -659,10 +659,8 @@ async def iq(event):
 ✰︎ ❨`.م14`❩ ↢ اوامـر الزخرفة
 ✰︎ ❨`.م15`❩ ↢ اوامـر الـوسـائـط
 ✰︎ ❨`.م16`❩ ↢ اوامـر الملـصـقات 
-╚━━⊶✰︎• [𝚂𝙾𝚄𝚁𝙲𝙴 𝚂𝙴𝙼𝙾](t.me/FTTUTY) •✰︎⊷━━╝
-
-᯽︙الـمـبـرمـجہ 𖠰 @DEV_SAMIR
-᯽︙ أن تكونَ عزيزاً غائباً.. أفضلُ بكثير من أن تكونَ حاضراً بلا قيم **""")
+᯽︙الـمـبـرمـجہ 𖠰 @DEV_SAMIR 
+╚━━⊶✰︎• [𝚂𝙾𝚄𝚁𝙲𝙴 𝚂𝙴𝙼𝙾](t.me/FTTUTY) •✰︎⊷━━╝**""")
 @iqthon.on(admin_cmd(pattern="م9(?: |$)(.*)"))    
 async def iq(event):
     await edit_or_reply(event, 
