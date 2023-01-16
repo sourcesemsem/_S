@@ -84,7 +84,6 @@ async def fetch_info(replied_user, event):
     caption += f"<b> {iqthonM}╎الاسـم    ☆╮ </b> {full_name}\n"
     caption += f"<b> {iqthonM}╎المعـرف  ☆╮ </b> {username}\n"
     caption += f"<b> {iqthonM}╎الايـدي   ☆╮ </b> <code>{user_id}</code>\n"
-    caption += f"<b> {iqthonM}╎ايـدي الـجـروب  ☆╮ </b> <code>{chat.id}</code>\n"
     caption += f"<b> {iqthonM}╎الرتبــهہ  ☆╮ {rotbat} </b>\n"
     caption += f"<b> {iqthonM}╎الصـور   ☆╮ </b> {replied_user_profile_photos_count}\n"
     caption += f"<b> {iqthonM}╎الحساب ☆╮ </b> "
