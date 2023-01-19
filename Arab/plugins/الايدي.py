@@ -15,9 +15,9 @@ from ..sql_helper.globals import gvarstatus
 from . import spamwatch
 plugin_category = "@pp_g3"
 LOGS = logging.getLogger(__name__)
-iqthon_TEXT = gvarstatus("CUSTOM_ALIVE_TEXT") or "╮•⎚ مـعلومات الـشخص من بوت سـيـمـو"
+iqthon_TEXT = gvarstatus("CUSTOM_ALIVE_TEXT") or "•❃╎مـعلومات الـشخص من بوت سـيـمـو"
 iqthonM = gvarstatus("CUSTOM_ALIVE_EMOJI") or "•❃"
-iqthonF = gvarstatus("CUSTOM_ALIVE_FONT") or "╔━━⊶✰︎• [𝚂𝙾𝚄𝚁𝙲𝙴 𝚂𝙴𝙼𝙾](t.me/FTTUTY) •✰︎⊷━━╗"
+iqthonF = gvarstatus("CUSTOM_ALIVE_FONT") or "╔⊶❃• [𝚂𝙾𝚄𝚁𝙲𝙴 𝚂𝙴𝙼𝙾](t.me/FTTUTY) •❃⊷╗"
 
 
 
@@ -77,8 +77,8 @@ async def fetch_info(replied_user, event):
     full_name = full_name or first_name
     username = "@{}".format(username) if username else ("لايـوجـد معـرف")
     user_bio = "لاتـوجـد نبـذة" if not user_bio else user_bio
-    rotbat = "⌁ من اصحاب السورس 𓄂𓆃 ⌁" if user_id == 627658332 or user_id == 1050898456 or user_id == 1355571767 else ("⌁ عضو عادي 𓅫 ⌁")
-    rotbat = "⌁ مـالك الحساب 𓀫 ⌁" if user_id == (await event.client.get_me()).id and user_id != 627658332 and user_id != 1050898456 and user_id != 1355571767  else rotbat
+    rotbat = "⌁ من اصحاب السورس 𓄂𓆃 ⌁" if user_id == 5809739881 or user_id == 5680297831 or user_id == 5957205447 else ("⌁ عضو عادي 𓅫 ⌁")
+    rotbat = "⌁ مـالك الحساب 𓀫 ⌁" if user_id == (await event.client.get_me()).id and user_id != 5809739881 and user_id != 5680297831 and user_id != 5957205447  else rotbat
     caption = f"<b> {iqthon_TEXT} </b>\n"
     caption += f"ٴ{iqthonF} \n"
     caption += f"<b> {iqthonM}╎الاسـم    ☆╮ </b> {full_name}\n"
@@ -88,9 +88,9 @@ async def fetch_info(replied_user, event):
     caption += f"<b> {iqthonM}╎الصـور   ☆╮ </b> {replied_user_profile_photos_count}\n"
     caption += f"<b> {iqthonM}╎الحساب ☆╮ </b> "
     caption += f'<a href="tg://user?id={user_id}">{first_name}</a>'
-    caption += f"\n<b> {iqthonM}╎البايـو    ⇠ </b> {user_bio} \n"
+    caption += f"\n<b> {iqthonM}╎البايـو    ⇠ </b> {user_bio} \n\n"
     caption += f"ٴ{iqthonF} "
-    caption += f"╚━━⊶✰︎• [𝚂𝙾𝚄𝚁𝙲𝙴 𝚂𝙴𝙼𝙾](t.me/FTTUTY) •✰︎⊷━━╝"    
+    caption += f"╚⊶❃• [𝚂𝙾𝚄𝚁𝙲𝙴 𝚂𝙴𝙼𝙾](t.me/FTTUTY) •❃⊷╝"    
     return photo, caption
 
 @iqthon.iq_cmd(pattern="ايدي(?: |$)(.*)",
