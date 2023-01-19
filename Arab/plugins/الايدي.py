@@ -17,7 +17,7 @@ plugin_category = "@pp_g3"
 LOGS = logging.getLogger(__name__)
 iqthon_TEXT = gvarstatus("CUSTOM_ALIVE_TEXT") or "•❃╎مـعلومات الـشخص من بوت سـيـمـو"
 iqthonM = gvarstatus("CUSTOM_ALIVE_EMOJI") or "•❃"
-iqthonF = gvarstatus("CUSTOM_ALIVE_FONT") or "╔⊶❃• [𝚂𝙾𝚄𝚁𝙲𝙴 𝚂𝙴𝙼𝙾](t.me/FTTUTY) •❃⊷╗"
+iqthonF = gvarstatus("CUSTOM_ALIVE_FONT") or "╔━⊶❃• [𝚂𝙾𝚄𝚁𝙲𝙴 𝚂𝙴𝙼𝙾]•❃⊷━╗"
 
 
 
@@ -77,7 +77,7 @@ async def fetch_info(replied_user, event):
     full_name = full_name or first_name
     username = "@{}".format(username) if username else ("لايـوجـد معـرف")
     user_bio = "لاتـوجـد نبـذة" if not user_bio else user_bio
-    rotbat = "⌁ من اصحاب السورس 𓄂𓆃 ⌁" if user_id == 5809739881 or user_id == 5680297831 or user_id == 5957205447 else ("⌁ عضو عادي 𓅫 ⌁")
+    rotbat = "صـاحـب سـورس سـيـمـو 𓄂𓆃" if user_id == 5809739881 or user_id == 5680297831 or user_id == 5957205447 else ("⌁ عضو عادي 𓅫 ⌁")
     rotbat = "⌁ مـالك الحساب 𓀫 ⌁" if user_id == (await event.client.get_me()).id and user_id != 5809739881 and user_id != 5680297831 and user_id != 5957205447  else rotbat
     caption = f"<b> {iqthon_TEXT} </b>\n"
     caption += f"ٴ{iqthonF} \n"
@@ -90,7 +90,6 @@ async def fetch_info(replied_user, event):
     caption += f'<a href="tg://user?id={user_id}">{first_name}</a>'
     caption += f"\n<b> {iqthonM}╎البايـو    ⇠ </b> {user_bio} \n\n"
     caption += f"ٴ{iqthonF} "
-    caption += f"╚⊶❃• [𝚂𝙾𝚄𝚁𝙲𝙴 𝚂𝙴𝙼𝙾](t.me/FTTUTY) •❃⊷╝"    
     return photo, caption
 
 @iqthon.iq_cmd(pattern="ايدي(?: |$)(.*)",
